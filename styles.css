@@ -13,6 +13,22 @@ body {
 	justify-content: center;
 }
 
+.header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.button-div{
+	margin-top: 20px;
+}
+
+.reset-button{
+	height: 40px;
+	width: 60px;
+	font-size: 1rem;
+}
+
 .grid{
 	margin-top: 50px;
 	display: grid;
