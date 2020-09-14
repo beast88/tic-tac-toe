@@ -6,6 +6,7 @@
 body {
 	box-sizing: border-box;
 	font-family: 'Roboto Mono', monospace;
+	background: #06d6a0;
 }
 
 .container{
@@ -27,6 +28,9 @@ body {
 	height: 40px;
 	width: 60px;
 	font-size: 1rem;
+	background: #81667a;
+	border: none;
+	border-radius: 7px;
 }
 
 .grid{
@@ -44,6 +48,11 @@ body {
 	align-items: center;
 	font-size: 7rem;
 	font-weight: 700;
+}
+
+.cell:hover{
+	background: #b4c5e4;
+	opacity: 80%;
 }
 
 #cell_0, #cell_1, #cell_2{
