@@ -24,7 +24,7 @@ body {
 	margin-top: 20px;
 }
 
-.reset-button{
+#reset-button{
 	height: 40px;
 	width: 60px;
 	font-size: 1rem;
@@ -53,6 +53,11 @@ body {
 .cell:hover{
 	background: #b4c5e4;
 	opacity: 80%;
+}
+
+.is-x:hover, .is-o:hover{
+	background: #06d6a0;
+	opacity: 100%;
 }
 
 #cell_0, #cell_1, #cell_2{
