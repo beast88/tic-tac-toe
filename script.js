@@ -22,11 +22,23 @@ const winningCombinations = [
 	[2, 4, 6],
 ]
 
+// Game function
+
+function startGame(){
+	xTurn = true;
+	for (const cellDiv of cellDivs) {
+		cellDiv.innerHTML = "";
+		cellDiv.classList.remove(xClass);
+		cellDiv.classList.remove(oClass);
+		cellDiv.removeEventListener('click', handleCell);
+		cellDiv.addEventListener('click', handleCell, {once : true});
+	}
+
+	finalMessage.classList.add('hidden');
+}
+
 
 //Event Handlers
-const resetGame = (e) => {
-	console.log(e);
-}
 
 const handleCell = (e) => {
 	const cell = e.target;
@@ -82,8 +94,6 @@ const endgame = (draw) => {
 }
 
 //Event Listeners
-resetBtn.addEventListener('click', resetGame);
+resetBtn.addEventListener('click', startGame);
 
-for (const cellDiv of cellDivs) {
-	cellDiv.addEventListener('click', handleCell, {once : true});
-}
+startGame()
