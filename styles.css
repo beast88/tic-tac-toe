@@ -75,3 +75,7 @@ body {
 #cell_6, #cell_7, #cell_8{
 	border-bottom: none;
 }
+
+.hidden{
+	display: none;
+}
