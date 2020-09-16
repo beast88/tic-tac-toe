@@ -9,6 +9,17 @@ const o = 'o';
 const xClass = "is-x";
 const oClass = "is-o";
 
+const winningCombinations = [
+	[0, 1, 2],
+	[3, 4, 5],
+	[6, 7, 8],
+	[0, 3, 6],
+	[1, 4, 7],
+	[2, 5, 8],
+	[0, 4, 8],
+	[2, 4, 6],
+]
+
 
 //Event Handlers
 const resetGame = (e) => {
@@ -21,8 +32,15 @@ const handleCell = (e) => {
 	const currentPlayer = xTurn ? x : o;
 	placeMark(cell, currentClass, currentPlayer);
 
+	//Check for win & draw
+	if(checkWin(currentClass)){
+		endgame();
+	}
+
+	isDraw();
+
 	//switch player
-	switchPlayer()
+	switchPlayer();
 }
 
 //Supporting functions
@@ -34,6 +52,26 @@ const placeMark = (cell, currentClass, currentPlayer) => {
 
 const switchPlayer = () => {
 	xTurn = !xTurn
+}
+
+const checkWin = (currentClass) => {
+	return winningCombinations.some(combination => {
+		return combination.every(index => {
+			return cellDivs[index].classList.contains(currentClass);
+		})
+	})
+	
+}
+
+const isDraw = () => {
+	return [...cellDivs].every(cell => {
+		return cell.classList.contains(xClass) ||
+		cell.classList.contains(oClass)
+	})
+}
+
+const endgame = () => {
+
 }
 
 //Event Listeners
