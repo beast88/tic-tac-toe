@@ -1,5 +1,7 @@
 const resetBtn = document.getElementById("reset-button");
 const cellDivs = document.querySelectorAll(".grid .cell");
+const finalMessage = document.querySelector(".final-message");
+const winningMessage = document.querySelector(".winning-message");
 
 let xTurn = true;
 
@@ -34,13 +36,12 @@ const handleCell = (e) => {
 
 	//Check for win & draw
 	if(checkWin(currentClass)){
-		endgame();
+		endgame(false)
+	} else if(isDraw()){
+		endgame(true)
+	} else {
+		switchPlayer()
 	}
-
-	isDraw();
-
-	//switch player
-	switchPlayer();
 }
 
 //Supporting functions
@@ -70,8 +71,14 @@ const isDraw = () => {
 	})
 }
 
-const endgame = () => {
+const endgame = (draw) => {
+	if(draw){
+		winningMessage.innerText = '--Draw--'
+	} else {
+		winningMessage.innerText = `${xTurn ? 'x' : 'o'} Wins!`
+	}
 
+	finalMessage.classList.remove('hidden');
 }
 
 //Event Listeners
