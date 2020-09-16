@@ -76,6 +76,24 @@ body {
 	border-bottom: none;
 }
 
+.final-message{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, .7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.winning-message {
+	color: #f991cc;
+	font-size: 4rem;
+}
+
 .hidden{
 	display: none;
 }
