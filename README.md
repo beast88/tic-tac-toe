@@ -1,27 +1,26 @@
-﻿Tic Tac Toe
-===========
+﻿# Tic Tac Toe
 
-*A two player game*
--------------------
+## Project Overview
 
-**--Instructions--**
+### Description
 
-Get three in a row of your symbol to win.
+A two player game of Tic Tac Toe. Take it in turns to place your piece and try to outwit your opponent.
 
-**--Development--**
+## Development
 
-Developed using HTML, CSS and Javascript.
+### Technologies
 
-The goal was to make this as simple and concise as possible without having to iterate through many arrays checking for win conditions.
+- Javascript
+- HTML
+- CSS
 
-**--Future Improvements--**
+### Applied Skills
 
-*Have a player choose their starting symbol.
+- Higher array methods
+- DOM manipulation
 
-*Enable players to enter their names.
+### Notes
 
-*Keep a score board for the session showing how many games each player has won.
+I wanted to make this as simple as possible in both design and how the code was written.
 
-*Improved styling.
-
-*Write an AI for a single player to play against.
+There is a lot of scope for future improvements for this app, such as writing an AI for a player to play against or allowing a player to choose their own play piece before the game starts.
